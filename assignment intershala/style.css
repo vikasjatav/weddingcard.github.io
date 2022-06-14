@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar  */
+#navbar{
+    display: flex;
+    align-items: center;
+    font-family: 'Slabo 27px', serif;
+}
+
+/* Navigation Bar   Logo and Image  */
+#logo{
+    margin:  4px 7px;
+
+}
+
+#logo img{
+    height: 56px;
+    margin:  18px 26px;
+
+}
+/* Navigation Bar   List Style  */
+#navbar{
+    position: relative;
+}
+#navbar ul{
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section  */
+.home{
+    width: 90%;
+    height: 230px;
+    text-align: center;
+    /* justify-content:center top; */
+    margin: auto;
+    padding:10px;
+    border: 2px solid red;
+    border-radius: 30px;
+    background: url(./Background.jpg);
+    z-index: -1;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+ 
+h2{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: right;
+    padding: 50px;
+
+}
+/* .row{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.row{
+   
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    width: 80%;
+    height: 350px;
+    
+    margin:-170px auto;
+    padding:10px;
+    border: 2px solid red;
+    border-radius: 30px;
+    background-color: white;
+}
+.slider{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s reverse infinite;
+    margin-right: 425px;
+
+    
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*80deg)) translateZ(153px);
+}
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    object-fit: cover;
+    transition: 2s;
+    border: 2px solid black;
+    position: fixed;
+
+
+}
+.slider span:hover img{
+    transform: translateY(-50px) scale(1);
+}
+.title{
+    width: 100%;
+    max-width: 15rem;
+    
+    /* box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2); */
+    /* display: flex; */
+    align-items: center;
+    border-radius: .8rem;
+    transform: translateX(43rem);
+
+}
+.btn{
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    padding: 23px;
+    margin: 35px;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Slabo 27px', serif;
+}
+.para_title{
+    margin: 23px;
+}
+
+.container{
+
+    /* margin-top: 40%; */
+    
+    flex-direction: column;
+    /* text-align: center;
+    justify-content: center; */
+    padding: 23px;
+    border: 2px solid red;
+    border-radius: 30px;
+    height: 230px;
+    width: 80%;
+    margin: 25px auto;
+    font-family: 'Slabo 27px', serif;
+
+}
+.feature{
+    font-size: 36px;
+    font-weight: 600;
+    padding: 11px;
+    text-align: center;
+    margin-top: 16%;
+}
+.indicator{
+    position: absolute;
+    left: 50%;
+    bottom: -205px;
+    transform: translateX(-50%);
+    box-shadow: 0 1.4rem 8rem rgba(167, 6, 6, 0.2);
+    
+}
+.indicator span { 
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(145, 142, 142, 0.5);
+    cursor: pointer;
+    margin: 71px;
+    
+}
+.first1{
+
+    font-size: 19px;
+    transform: translateY(-50%);
+    
+
+}
+.card1{
+    margin: 12px;
+    padding: 12px;
+}
+.paragraph{
+    display: flex;
+    margin: 38px;
+    padding: 109px;
+    
+}
+
+
+
